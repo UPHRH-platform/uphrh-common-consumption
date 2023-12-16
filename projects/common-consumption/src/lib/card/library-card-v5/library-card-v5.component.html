@@ -1,10 +1,8 @@
-<!-- card component -->
-<span *ngIf="!layoutConfig">
 <div class="sb--card"
   [ngClass]="{'sb--card--recently-viewed': type === LibraryCardTypes.RECENTLY_VIEWED, 'offline': isOffline, 'selected': isSelected}"
   (click)="onClick($event)" (keydown.enter)="onEnterKeyPress($event)" *ngIf="!isLoading" tabindex="0" role="button">
-  <!-- <div class="sb-card-label">{{content?.resourceType}}</div> -->
-  <div class="sb--card__main-area">
+  <div class="sb-card-label">{{content?.primaryCategory}}</div>
+  <div class="sb--card__main-area mt-16">
     <!-- card img -->
     <!-- <div class="sb--card__img">
       <div class="img-container">
@@ -112,38 +110,3 @@
       </div>
 
   </div>
-</span>
-<span *ngIf="layoutConfig">
-    <ng-container *ngIf="(layoutConfig && !layoutConfig.layout) || layoutConfig.layout === 'v2'">
-      <sb-library-card-v2 [indexToDisplay]="indexToDisplay" [isLoading]="isLoading" [content]="content" [isMobile]="isMobile"
-      [isOffline]="isOffline" [cardImg]="cardImg" [type]="type" [moreInfoLabel]="moreInfoLabel" [isSelected]="isSelected"
-      [section]="section" [btnlabel]="btnlabel" [btnicon]="btnicon"
-      [layoutConfig]="layoutConfig" [isMenu]="isMenu" (cardClick)="onClick($event)" (enterKeyPress)="onEnterKeyPress($event)"
-      (menuClick)="onMenuClick($event);$event.stopPropagation()" [hover-template]="gridTemplate"
-      ></sb-library-card-v2>
-    </ng-container>
-    <ng-container *ngIf="layoutConfig.layout === 'v3'">
-      <sb-library-card-v3 [indexToDisplay]="indexToDisplay" [isLoading]="isLoading" [content]="content" [isMobile]="isMobile"
-      [isOffline]="isOffline" [cardImg]="cardImg" [type]="type" [moreInfoLabel]="moreInfoLabel" [isSelected]="isSelected"
-      [section]="section" [btnlabel]="btnlabel" [btnicon]="btnicon"
-      [layoutConfig]="layoutConfig" [isMenu]="isMenu" (cardClick)="onClick($event)" (enterKeyPress)="onEnterKeyPress($event)"
-      (menuClick)="onMenuClick($event);$event.stopPropagation()" [hover-template]="gridTemplate"
-      ></sb-library-card-v3>
-    </ng-container>
-    <ng-container *ngIf="layoutConfig.layout === 'v4'">
-      <sb-library-card-v4 [indexToDisplay]="indexToDisplay" [isLoading]="isLoading" [content]="content" [isMobile]="isMobile"
-      [isOffline]="isOffline" [cardImg]="cardImg" [type]="type" [moreInfoLabel]="moreInfoLabel" [isSelected]="isSelected"
-      [section]="section" [btnlabel]="btnlabel" [btnicon]="btnicon"
-      [layoutConfig]="layoutConfig" [isMenu]="isMenu" (cardClick)="onClick($event)" (enterKeyPress)="onEnterKeyPress($event)"
-      (menuClick)="onMenuClick($event);$event.stopPropagation()" [hover-template]="gridTemplate"
-      ></sb-library-card-v4>
-    </ng-container>
-    <ng-container *ngIf="layoutConfig.layout === 'v5'">
-      <sb-library-card-v5 [indexToDisplay]="indexToDisplay" [isLoading]="isLoading" [content]="content" [isMobile]="isMobile"
-      [isOffline]="isOffline" [cardImg]="cardImg" [type]="type" [moreInfoLabel]="moreInfoLabel" [isSelected]="isSelected"
-      [section]="section" [btnlabel]="btnlabel" [btnicon]="btnicon"
-      [layoutConfig]="layoutConfig" [isMenu]="isMenu" (cardClick)="onClick($event)" (enterKeyPress)="onEnterKeyPress($event)"
-      (menuClick)="onMenuClick($event);$event.stopPropagation()" [hover-template]="gridTemplate"
-      ></sb-library-card-v5>
-    </ng-container>
-</span>

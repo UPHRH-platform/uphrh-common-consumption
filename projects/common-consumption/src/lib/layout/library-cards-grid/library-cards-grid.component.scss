@@ -21,6 +21,7 @@
     @include margin(1.5rem 0 1rem 0);
     padding: 0px 0;
     align-items: center;
+    // background-color: darkgoldenrod;
 
     .title {
       font-family: inherit;
@@ -167,4 +168,18 @@
   right: 0;
   margin-top: -1.5rem;
  }
+}
+.sb-btn-white{
+  opacity: 1 !important;
+  color: rgba(236,73,51,1) !important;
+  /* font-family: "NotoSans-Bold"; */
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+  letter-spacing: 0.29px !important;
+  text-align: left !important;
+  text-decoration: underline !important;
+  border: none !important;
+  background-color: transparent !important;
+  box-shadow: unset !important;
 }

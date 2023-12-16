@@ -1,4 +1,4 @@
-<div class="header" *ngIf="platform === 'portal' && pillItems?.length > 0">
+<div class="header p-0" *ngIf="platform === 'portal' && pillItems?.length > 0">
   <div class="title">{{title}}</div>
   <div *ngIf="minDisplayCount && (pillItems?.length > minDisplayCount)">
     <button class="sb-btn sb-btn-normal font-weight-bold sb-btn-outline-primary sb-btn-white" *ngIf="showMoreViewType===ShowMoreViewType.EXPAND && viewCount < pillItems?.length"
